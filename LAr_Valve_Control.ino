@@ -44,42 +44,9 @@ void loop()
   Moto.Set_Seconds_Per_Turn(5); // this is pretty fast
   //Moto.Set_Steps_Per_Turn(400) this depends on the controller
   
-  incomingByte = Commander.Check_Serial();
-//  incomingByte = Serial.read();
+  incoming = Commander.Check_Serial();
+  Serial.println(incoming);
 
-//  while (Serial.available()) 
-//  {
-//    delay(2);  //delay to allow byte to arrive in input buffer
-//    char c = Serial.read();
-//    readString += c;
-//  }
-//  
-//  if (readString.length() >0) 
-//  {
-//    Serial.println(readString);
-//    readString="";
-//  }
-  
-//  if (incomingByte > 100)
-//  {
-//    Moto.TEST_MOTOR();
-//    Arduno_time = millis();
-//    counter+=1;
-//    
-//    Serial.print("Counter = ");
-//    Serial.println(counter);
-//    Serial.print("Time = ");
-//    Serial.println(Arduno_time); 
-//    Serial.print("Time = ");
-//    Serial.println(Arduno_time - OneMinuet);    
-//  }
-//  else 
-//  {
-//    Serial.print("Waiting ...");
-//    delay(1000);
-//  }
-
-  //Serial.println(readCommand());
   Serial.println(incomingByte);
   if (incomingByte > 10)
   {

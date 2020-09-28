@@ -1,4 +1,4 @@
-// Motor include
+// Commands include
 #include "Commands.h"
 
 // Arduino specific includes
@@ -7,7 +7,7 @@
 
 
 //====================================================
-std::string Commands::Check_Serial()
+String Commands::Check_Serial()
 {
     while (Serial.available()) 
     {
@@ -21,5 +21,5 @@ std::string Commands::Check_Serial()
         Serial.println(readString);
         readString="";
     }
-    return readString
+    return readString;
 }

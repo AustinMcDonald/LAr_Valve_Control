@@ -8,7 +8,7 @@
 
 
 //====================================================
-float Sensor_Control::Check_Serial()
+float Sensor_Control::Read_Value()
 {
     raw = analogRead(SensPin);
     buffer = raw * Vin;
