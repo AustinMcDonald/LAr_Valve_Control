@@ -7,7 +7,7 @@
 
 
 //====================================================
-String Commands::Check_Serial()
+std::string Commands::Check_Serial()
 {
     while (Serial.available()) 
     {

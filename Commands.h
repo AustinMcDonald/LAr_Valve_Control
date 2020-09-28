@@ -1,5 +1,6 @@
 #ifndef Commands_h
 #define Commands_h 1
+#include <string>
 
 //===============================================
 // Class for controling the sensor
@@ -7,11 +8,11 @@ class Commands
 {
 private:
     //====================================================
-    String readString;
+    std::string readString;
     
 public:
     //====================================================
-    String Check_Serial();
+    std::string Check_Serial();
     
   
 };
