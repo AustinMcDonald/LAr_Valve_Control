@@ -2,9 +2,13 @@
 #define Dir 8
 #define ENG 12
 
+#define SensPin 7
+
 #include "Motor_Control.h"
+#include "Sesor_Control.h"
 
 Motor_Control Moto = Motor_Control();
+Sesor_Control Sens = Sesor_Control();
 
 int counter = 0;
 unsigned long Arduno_time;
@@ -15,6 +19,7 @@ bool Valve_Status = false;
 
 int incomingByte = 0; // for incoming serial data
 
+float SensVal = 0;
 
 void setup()
 {
@@ -34,25 +39,29 @@ void loop()
 
   incomingByte = Serial.read();
   
-  if (incomingByte > 100)
-  {
-    Moto.TEST_MOTOR();
-    Arduno_time = millis();
-    counter+=1;
-    
-    Serial.print("Counter = ");
-    Serial.println(counter);
-    Serial.print("Time = ");
-    Serial.println(Arduno_time); 
-    Serial.print("Time = ");
-    Serial.println(Arduno_time - OneMinuet);    
-  }
-  else 
-  {
-    Serial.print("Waiting ...");
-    delay(1000);
-    
-  }
+//  if (incomingByte > 100)
+//  {
+//    Moto.TEST_MOTOR();
+//    Arduno_time = millis();
+//    counter+=1;
+//    
+//    Serial.print("Counter = ");
+//    Serial.println(counter);
+//    Serial.print("Time = ");
+//    Serial.println(Arduno_time); 
+//    Serial.print("Time = ");
+//    Serial.println(Arduno_time - OneMinuet);    
+//  }
+//  else 
+//  {
+//    Serial.print("Waiting ...");
+//    delay(1000);
+//  }
+
+  SensVal = Sens.Read_Value();
+  Serial.print("SensVal: ");
+  Serial.println(SensVal);
+  delay(10);
   
   
 }

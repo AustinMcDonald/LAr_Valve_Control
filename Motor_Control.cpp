@@ -1,12 +1,13 @@
 
 // Motor include
 #include "Motor_Control.h"
-
-// Arduino specific includes
-#include <Arduino.h>
 #define Pulse 9
 #define Dir 8
 #define ENG 12
+
+// Arduino specific includes
+#include <Arduino.h>
+
 
 //===============================================
 // Class for controling the stepper
