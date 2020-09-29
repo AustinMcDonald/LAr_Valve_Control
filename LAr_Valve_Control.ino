@@ -61,14 +61,14 @@ void loop()
       Serial.println(Arduno_time);
       Last_time = Arduno_time;
       Moto.Open_Valve();
-      delay(TenMinuets);
+      delay(TenMinuet);
       is_valve_open = false;
       Moto.Close_Valve();
     }
   
   }
   // open valve
-  if else (incoming == "open/n")
+  else if (incoming == "open/n")
   {
     if (!is_valve_open)
     {
@@ -79,7 +79,7 @@ void loop()
     }
   }
   // close valve
-  if else (incoming == "close/n")
+  else if (incoming == "close/n")
   {
     if (is_valve_open)
     {
