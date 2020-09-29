@@ -17,8 +17,8 @@ private:
 public:
     //====================================================
     float Read_Value();
-    
-  
+    float Measure();
+
 };
 
 #endif

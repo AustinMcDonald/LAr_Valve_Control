@@ -18,8 +18,9 @@ String Commands::Check_Serial()
     
     if (readString.length() >0) 
     {
-        Serial.println(readString);
+        //Serial.println(readString);
+        returnString = readString;
         readString="";
     }
-    return readString;
+    return returnString;
 }

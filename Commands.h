@@ -9,6 +9,7 @@ class Commands
 private:
     //====================================================
     String readString;
+    String returnString;
     
 public:
     //====================================================
